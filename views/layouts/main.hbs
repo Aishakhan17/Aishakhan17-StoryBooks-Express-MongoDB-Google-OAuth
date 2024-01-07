@@ -1,0 +1,64 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="/css/style.css" />
+		<title>Storybooks</title>
+	</head>
+	<body>
+        {{> _header}}
+        {{> _add_btn}}
+		<div class="container">
+			{{{body}}}
+
+		</div>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+		></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.22.1/ckeditor.js" integrity="sha512-F8fV4+wpHYl9zul08Soff9H9fCx6OMIFfgbQcy+2v2gV7PdbT0OgM1LFwujQmwlLGWWKNbOFZ13uWP+Cbe0Ngw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+        <script type="text/javascript">
+            M.Sidenav.init(document.querySelector('.sidenav'))
+            
+            M.FormSelect.init(document.querySelector('#status'))
+
+            CKEDITOR.replace("body", {
+                plugins: "wysiwygarea, toolbar, basicstyles, link", 
+                autoGrow_maxHeight: 400,
+                autoGrow_minHeight: 300,
+                autoParagraph: false,
+                allowedContent: false,
+            })
+        </script>
+        <script>
+            document.getElementById("signout").addEventListener("click", 
+            @Override 
+            public void onClick(View v) { 
+                switch (v.getId()) { 
+                    case R.id.button_sign_out: 
+                        signOut(); 
+                        break; 
+                } 
+            } 
+            private void signOut() { 
+                mGoogleSignInClient.signOut() 
+                        .addOnCompleteListener(this, new OnCompleteListener<Void>() { 
+                            @Override 
+                            public void onComplete(@NonNull Task<Void> task) { 
+            } }); } )
+        </script>
+	</body>
+</html>
